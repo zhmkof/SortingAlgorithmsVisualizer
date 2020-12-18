@@ -16,35 +16,22 @@ class BottomPointer extends StatelessWidget {
       width: double.infinity,
       child: Stack(
         children: pointers
-            .map(
-              (item) => Padding(
-                padding: EdgeInsets.only(
-                    left:
-                        item * MediaQuery.of(context).size.width / length + 8),
-                child: Icon(
-                  Icons.arrow_upward,
-                  color: activeData,
-                ),
-              ),
-            )
-            .toList(),
+					.map(
+						(item) => Padding(
+							padding: EdgeInsets.only(left: item * MediaQuery.of(context).size.width / length + 8),
+							child: Icon(Icons.arrow_upward, color: activeData),
+						),
+					)
+					.toList(),
         // <Widget>[
         //   pointers.map((item) => new Text(item)).toList(),
         //   Padding(
-        //     padding: EdgeInsets.only(
-        //         left: start * MediaQuery.of(context).size.width / length + 8),
-        //     child: Icon(
-        //       Icons.arrow_upward,
-        //       color: Colors.white,
-        //     ),
+        //     padding: EdgeInsets.only(left: start * MediaQuery.of(context).size.width / length + 8),
+        //     child: Icon(Icons.arrow_upward, color: Colors.white),
         //   ),
         //   Padding(
-        //     padding: EdgeInsets.only(
-        //         left: end * MediaQuery.of(context).size.width / length + 8),
-        //     child: Icon(
-        //       Icons.arrow_upward,
-        //       color: Colors.white,
-        //     ),
+        //     padding: EdgeInsets.only(left: end * MediaQuery.of(context).size.width / length + 8),
+        //     child: Icon(Icons.arrow_upward,color: Colors.white),
         //   ),
         // ],
       ),
